@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'users',
     'corsheaders',
     'rest_framework',
-    'rest_framework_simplejwt'
+    'rest_framework_simplejwt.token_blacklist'
 ]
 
 MIDDLEWARE = [
@@ -138,3 +138,16 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+
+AUTHENTICATION_BACKENDS = [
+    'users.backends.EmailBackend',  # Replace 'your_app_name' with the actual name of your app
+    'django.contrib.auth.backends.ModelBackend',  # Keep the default for fallback
+]
+
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CORS_ALLOW_ALL_ORIGINS = True

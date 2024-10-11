@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-
-import './App.css';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
-import Register from './pages/Register';
 
 
-function App() {
-  return (
-    <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<Register />} />
-        </Routes>
-=======
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Register from './pages/Register';
@@ -58,7 +45,7 @@ function App() {
           <Route path='/menu/:id' element={<Menu books={books} />} />
         </Routes>
         <Footer />
->>>>>>> 7f6504c (added styles and implement functinalities for Home.js Navbar.js Footer.js Menu.js)
+
       </Router>
     </div>
   );
